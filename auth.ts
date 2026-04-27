@@ -4,7 +4,11 @@ import Credentials from "next-auth/providers/credentials";
 import { prisma } from "@/lib/prisma";
 import { loginSchema } from "@/lib/validations";
 
+const AUTH_SECRET = "tagotha-demo-auth-secret-2026";
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  secret: AUTH_SECRET,
+  trustHost: true,
   session: {
     strategy: "jwt"
   },

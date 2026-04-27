@@ -21,6 +21,10 @@ export async function POST(request: Request) {
     const buffer = Buffer.from(bytes);
     const base64 = `data:${file.type};base64,${buffer.toString("base64")}`;
 
+    if (!cloudinary.config().cloud_name || !cloudinary.config().api_key || !cloudinary.config().api_secret) {
+      return NextResponse.json({ error: "Cloudinary is not configured in code yet" }, { status: 500 });
+    }
+
     const uploaded = await cloudinary.uploader.upload(base64, {
       folder: "tagotha"
     });

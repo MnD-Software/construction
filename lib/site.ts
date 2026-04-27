@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Tagotha Investments",
   description:
     "Tagotha Investments supplies reliable construction materials in Homa Bay, Kenya, serving contractors, builders, hardware stores and homeowners.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: "http://localhost:3000",
   phoneDisplay: "0781532200",
   phoneHref: "tel:0781532200",
   whatsapp: "254781532200",

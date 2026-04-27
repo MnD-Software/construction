@@ -1,4 +1,4 @@
-const isStaticExport = process.env.STATIC_EXPORT === "true";
+const isStaticExport = false;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
