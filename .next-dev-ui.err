@@ -1,0 +1,67 @@
+ ⚠ Port 3000 is in use by process 18964, using available port 3002 instead.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: EPERM: operation not permitted, rename 'C:\Users\Web Design\OneDrive\Desktop\costruction\.next\cache\webpack\server-development\0.pack.gz_' -> 'C:\Users\Web Design\OneDrive\Desktop\costruction\.next\cache\webpack\server-development\0.pack.gz'
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1741778792300-3e420d5fcb26?auto=format&fit=crop&w=1600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1741778792300-3e420d5fcb26?auto=format&fit=crop&w=1600&q=80 404
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (128kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ⨯ ./components/admin/sidebar.tsx
+Error:   [31mx[0m It is not allowed to define inline "use server" annotated Server Actions in Client Components.
+  [31m|[0m To use Server Actions in a Client Component, you can either export them from a separate file with "use server" at the top, or pass them down through props from a Server Component.
+  [31m|[0m
+  [31m|[0m Read more: https://nextjs.org/docs/app/api-reference/directives/use-server#using-server-functions-in-a-client-component
+
+    ,-[[36;1;4mC:\Users\Web Design\OneDrive\Desktop\costruction\components\admin\sidebar.tsx[0m:58:1]
+ [2m55[0m |       </nav>
+ [2m56[0m |       <form
+ [2m57[0m |         action={async () => {
+ [2m58[0m |           "use server";
+    : [35;1m          ^^^^^^^^^^^^[0m
+ [2m59[0m |           await signOut({ redirectTo: "/login" });
+ [2m60[0m |         }}
+ [2m61[0m |         className="p-4"
+    `----
+
+Import trace for requested module:
+./components/admin/sidebar.tsx
+ ⨯ ./components/admin/sidebar.tsx
+Error:   [31mx[0m It is not allowed to define inline "use server" annotated Server Actions in Client Components.
+  [31m|[0m To use Server Actions in a Client Component, you can either export them from a separate file with "use server" at the top, or pass them down through props from a Server Component.
+  [31m|[0m
+  [31m|[0m Read more: https://nextjs.org/docs/app/api-reference/directives/use-server#using-server-functions-in-a-client-component
+
+    ,-[[36;1;4mC:\Users\Web Design\OneDrive\Desktop\costruction\components\admin\sidebar.tsx[0m:58:1]
+ [2m55[0m |       </nav>
+ [2m56[0m |       <form
+ [2m57[0m |         action={async () => {
+ [2m58[0m |           "use server";
+    : [35;1m          ^^^^^^^^^^^^[0m
+ [2m59[0m |           await signOut({ redirectTo: "/login" });
+ [2m60[0m |         }}
+ [2m61[0m |         className="p-4"
+    `----
+
+Import trace for requested module:
+./components/admin/sidebar.tsx
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1741778792300-3e420d5fcb26?auto=format&fit=crop&w=1600&q=80 404
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: EPERM: operation not permitted, rename 'C:\Users\Web Design\OneDrive\Desktop\costruction\.next\cache\webpack\server-development\0.pack.gz_' -> 'C:\Users\Web Design\OneDrive\Desktop\costruction\.next\cache\webpack\server-development\0.pack.gz'
+ ⨯ ./components/admin/sidebar.tsx
+Error:   [31mx[0m It is not allowed to define inline "use server" annotated Server Actions in Client Components.
+  [31m|[0m To use Server Actions in a Client Component, you can either export them from a separate file with "use server" at the top, or pass them down through props from a Server Component.
+  [31m|[0m
+  [31m|[0m Read more: https://nextjs.org/docs/app/api-reference/directives/use-server#using-server-functions-in-a-client-component
+
+    ,-[[36;1;4mC:\Users\Web Design\OneDrive\Desktop\costruction\components\admin\sidebar.tsx[0m:58:1]
+ [2m55[0m |       </nav>
+ [2m56[0m |       <form
+ [2m57[0m |         action={async () => {
+ [2m58[0m |           "use server";
+    : [35;1m          ^^^^^^^^^^^^[0m
+ [2m59[0m |           await signOut({ redirectTo: "/login" });
+ [2m60[0m |         }}
+ [2m61[0m |         className="p-4"
+    `----
+
+Import trace for requested module:
+./components/admin/sidebar.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: EPERM: operation not permitted, rename 'C:\Users\Web Design\OneDrive\Desktop\costruction\.next\cache\webpack\server-development\0.pack.gz_' -> 'C:\Users\Web Design\OneDrive\Desktop\costruction\.next\cache\webpack\server-development\0.pack.gz'

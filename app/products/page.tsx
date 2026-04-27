@@ -1,20 +1,20 @@
+import { PageHero } from "@/components/page-hero";
 import { ProductsFilter } from "@/components/products-filter";
-import { SectionHeading } from "@/components/section-heading";
 import { getProducts } from "@/lib/data";
 
 export default async function ProductsPage() {
   const products = await getProducts();
 
   return (
-    <div className="section-shell">
-      <SectionHeading
+    <>
+      <PageHero
         eyebrow="Products"
-        title="Construction materials ready for homes, sites and resellers"
-        copy="Browse our core material lines and contact us for pricing, bulk rates and delivery planning."
+        title="Construction materials arranged with a clearer catalogue feel"
+        copy="Browse core material lines, filter quickly, and move from overview to detail with less friction on both desktop and mobile."
       />
-      <div className="mt-10">
+      <div className="section-shell pt-0">
         <ProductsFilter products={products} />
       </div>
-    </div>
+    </>
   );
 }

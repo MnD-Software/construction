@@ -24,7 +24,7 @@ async function main() {
       heroSubtitle:
         "Reliable supply of cement, steel, sand and bulk materials for contractors, hardware stores and home builders across Homa Bay and beyond.",
       heroImage:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1741778792300-3e420d5fcb26?auto=format&fit=crop&w=1600&q=80",
       ctaBannerTitle: "Ready to source materials for your next project?",
       ctaBannerCopy:
         "Speak with Tagotha Investments for dependable pricing, fast delivery and bulk supply support.",

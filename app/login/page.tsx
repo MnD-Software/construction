@@ -1,5 +1,6 @@
 "use client";
 
+import type { Route } from "next";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useState } from "react";
@@ -33,7 +34,8 @@ export default function LoginPage() {
       return;
     }
 
-    router.push(params.get("callbackUrl") ?? "/admin");
+    const callbackUrl = params.get("callbackUrl");
+    router.push((callbackUrl?.startsWith("/") ? callbackUrl : "/admin") as Route);
     router.refresh();
   }
 

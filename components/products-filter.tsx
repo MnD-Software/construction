@@ -36,13 +36,13 @@ export function ProductsFilter({ products }: { products: Product[] }) {
 
   return (
     <div className="space-y-8">
-      <div className="grid gap-4 rounded-2xl border bg-card/70 p-5 md:grid-cols-[1fr_auto] md:items-center">
+      <div className="industrial-panel grid gap-4 rounded-[28px] p-5 md:grid-cols-[1fr_auto] md:items-center">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            className="pl-10"
+            className="h-12 rounded-full border-black/6 bg-white/85 pl-10"
             placeholder="Search materials"
           />
         </div>
@@ -53,17 +53,18 @@ export function ProductsFilter({ products }: { products: Product[] }) {
               type="button"
               variant={item === category ? "default" : "outline"}
               size="sm"
+              className="rounded-full"
               onClick={() => setCategory(item)}
             >
               {item}
             </Button>
           ))}
-          <Button type="button" size="sm" variant="ghost" onClick={reset}>
+          <Button type="button" size="sm" variant="ghost" className="rounded-full" onClick={reset}>
             Reset
           </Button>
         </div>
       </div>
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
         {filtered.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

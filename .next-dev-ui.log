@@ -1,0 +1,99 @@
+
+> tagotha-investments@1.0.0 dev
+> next dev
+
+   ▲ Next.js 15.5.15
+   - Local:        http://localhost:3002
+   - Network:      http://172.20.10.5:3002
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 12.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 20.5s (1517 modules)
+ GET / 200 in 22276ms
+prisma:error 
+Invalid `prisma.siteContent.findFirst()` invocation:
+
+
+The table `main.SiteContent` does not exist in the current database.
+prisma:error 
+Invalid `prisma.product.findMany()` invocation:
+
+
+The table `main.Product` does not exist in the current database.
+prisma:error 
+Invalid `prisma.siteContent.findFirst()` invocation:
+
+
+The table `main.SiteContent` does not exist in the current database.
+prisma:error 
+Invalid `prisma.testimonial.findMany()` invocation:
+
+
+The table `main.Testimonial` does not exist in the current database.
+prisma:error 
+Invalid `prisma.product.findMany()` invocation:
+
+
+The table `main.Product` does not exist in the current database.
+prisma:error 
+Invalid `prisma.testimonial.findMany()` invocation:
+
+
+The table `main.Testimonial` does not exist in the current database.
+ GET / 200 in 6351ms
+prisma:error 
+Invalid `prisma.siteContent.findFirst()` invocation:
+
+
+The table `main.SiteContent` does not exist in the current database.
+prisma:error 
+Invalid `prisma.product.findMany()` invocation:
+
+
+The table `main.Product` does not exist in the current database.
+prisma:error 
+Invalid `prisma.testimonial.findMany()` invocation:
+
+
+The table `main.Testimonial` does not exist in the current database.
+ GET / 200 in 3490ms
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 15.4s (1661 modules)
+prisma:error 
+Invalid `prisma.product.findMany()` invocation:
+
+
+The table `main.Product` does not exist in the current database.
+prisma:error 
+Invalid `prisma.testimonial.findMany()` invocation:
+
+
+The table `main.Testimonial` does not exist in the current database.
+prisma:error 
+Invalid `prisma.siteContent.findFirst()` invocation:
+
+
+The table `main.SiteContent` does not exist in the current database.
+ GET / 200 in 4949ms
+ GET /api/auth/session 200 in 22810ms
+ GET /api/auth/session 200 in 3556ms
+ GET /api/auth/session 200 in 85ms
+ GET /api/auth/session 200 in 38ms
+ ○ Compiling /products ...
+ ✓ Compiled /products in 2.3s (1670 modules)
+prisma:error 
+Invalid `prisma.product.findMany()` invocation:
+
+
+The table `main.Product` does not exist in the current database.
+ GET /products 200 in 3427ms
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 4s (256 modules)
+ ○ Compiling /admin ...
+ GET / 500 in 23020ms
+ GET / 200 in 14542ms
+ GET / 500 in 303ms
+ GET / 500 in 489ms
+ GET / 500 in 65ms
