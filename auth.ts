@@ -1,20 +1,12 @@
 import bcrypt from "bcryptjs";
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
+import { authConfig } from "@/auth.config";
 import { prisma } from "@/lib/prisma";
 import { loginSchema } from "@/lib/validations";
 
-const AUTH_SECRET = "tagotha-demo-auth-secret-2026";
-
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  secret: AUTH_SECRET,
-  trustHost: true,
-  session: {
-    strategy: "jwt"
-  },
-  pages: {
-    signIn: "/login"
-  },
+  ...authConfig,
   providers: [
     Credentials({
       name: "credentials",
@@ -47,19 +39,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         };
       }
     })
-  ],
-  callbacks: {
-    jwt: async ({ token, user }) => {
-      if (user) {
-        token.sub = user.id;
-      }
-      return token;
-    },
-    session: async ({ session, token }) => {
-      if (session.user && token.sub) {
-        session.user.id = token.sub;
-      }
-      return session;
-    }
-  }
+  ]
 });
