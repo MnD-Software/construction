@@ -42,7 +42,7 @@ export function ProductsFilter({ products }: { products: Product[] }) {
           <Input
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            className="h-12 rounded-full border-black/6 bg-white/85 pl-10"
+            className="h-12 rounded-full border-black/5 bg-white/85 pl-10"
             placeholder="Search materials"
           />
         </div>

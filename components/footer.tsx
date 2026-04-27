@@ -8,9 +8,12 @@ export function Footer() {
     <footer className="px-3 pb-24 pt-3 md:px-0 md:pb-0">
       <div className="container">
         <div className="dark-panel page-noise overflow-hidden px-6 py-10 md:px-10 md:py-12">
-          <div className="grid gap-10 md:grid-cols-[1.1fr_0.7fr_0.8fr]">
+          <div className="grid gap-10 xl:grid-cols-[1.2fr_0.7fr_0.9fr]">
             <div>
-              <h3 className="text-2xl font-semibold text-white">Tagotha Investments</h3>
+              <p className="text-xs uppercase tracking-[0.2em] text-white/45">Tagotha Investments</p>
+              <h3 className="font-display mt-4 max-w-lg text-3xl font-semibold text-white md:text-4xl">
+                Materials supply presented with more confidence and less clutter.
+              </h3>
               <p className="mt-4 max-w-md text-sm leading-7 text-white/62">
                 Quality construction materials for contractors, hardware stores and individual builders across Homa Bay.
               </p>
@@ -23,7 +26,7 @@ export function Footer() {
               </a>
             </div>
             <div>
-              <h4 className="font-medium text-white">Quick Links</h4>
+              <h4 className="text-xs uppercase tracking-[0.18em] text-white/45">Quick Links</h4>
               <div className="mt-4 flex flex-col gap-3 text-sm text-white/60">
                 <Link href="/about">About</Link>
                 <Link href="/products">Products</Link>
@@ -32,7 +35,7 @@ export function Footer() {
               </div>
             </div>
             <div>
-              <h4 className="font-medium text-white">Contact</h4>
+              <h4 className="text-xs uppercase tracking-[0.18em] text-white/45">Contact</h4>
               <div className="mt-4 space-y-3 text-sm text-white/60">
                 <a href={siteConfig.phoneHref} className="flex items-center gap-2">
                   <Phone className="h-4 w-4 text-primary" />

@@ -1,7 +1,6 @@
 import { Award, BriefcaseBusiness, Target } from "lucide-react";
+import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion/reveal";
-import { SectionHeading } from "@/components/section-heading";
-import { Badge } from "@/components/ui/badge";
 import { getSiteContent } from "@/lib/data";
 
 const values = [
@@ -26,48 +25,61 @@ export default async function AboutPage() {
   const content = await getSiteContent();
 
   return (
-    <div className="section-shell space-y-16">
-      <Reveal>
-        <Badge variant="secondary">About Tagotha</Badge>
-        <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
-          Local supply expertise shaped by Kenyan construction needs
-        </h1>
-        <p className="section-copy">{content.aboutSnippet ?? content.heroSubtitle}</p>
-      </Reveal>
-
-      <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Our Story"
-            title="Built around trust, consistency and practical service"
-            copy="Tagotha Investments serves Homa Bay with quality materials for new builds, renovations, commercial sites and infrastructure work. We understand that delays cost money, so our focus stays on availability, communication and dependable delivery."
-          />
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="rounded-3xl border bg-card/80 p-8 shadow-soft">
-            <p className="text-lg leading-8 text-muted-foreground">
-              Whether the customer is a contractor managing a busy site, a hardware store restocking inventory or a homeowner planning a personal build, our role is the same: supply durable materials without unnecessary friction.
-            </p>
-          </div>
-        </Reveal>
-      </div>
-
-      <div className="grid gap-6 md:grid-cols-3">
-        {values.map((value, index) => {
-          const Icon = value.icon;
-          return (
-            <Reveal key={value.title} delay={index * 0.08}>
-              <div className="rounded-2xl border bg-card/70 p-6 shadow-soft">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Icon className="h-5 w-5" />
+    <>
+      <PageHero
+        eyebrow="About Tagotha"
+        title="Local supply expertise shaped by Kenyan construction needs"
+        copy={content.aboutSnippet ?? content.heroSubtitle}
+      />
+      <div className="section-shell pt-0 space-y-10">
+        <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+          <Reveal>
+            <div className="section-frame">
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Our Story</p>
+              <h2 className="font-display mt-4 text-3xl font-semibold md:text-5xl">
+                Built around trust, consistency and practical service
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
+                Tagotha Investments serves Homa Bay with quality materials for new builds, renovations, commercial sites and infrastructure work. We understand that delays cost money, so our focus stays on availability, communication and dependable delivery.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <div className="dark-panel p-8">
+              <p className="text-sm leading-8 text-white/68">
+                Whether the customer is a contractor managing a busy site, a hardware store restocking inventory or a homeowner planning a personal build, our role is the same: supply durable materials without unnecessary friction.
+              </p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-[22px] border border-white/10 bg-white/[0.03] p-4">
+                  <p className="text-3xl font-semibold text-primary">Reliable</p>
+                  <p className="mt-2 text-sm text-white/58">Delivery-first material sourcing</p>
                 </div>
-                <h2 className="mt-5 text-2xl font-semibold">{value.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-muted-foreground">{value.copy}</p>
+                <div className="rounded-[22px] border border-white/10 bg-white/[0.03] p-4">
+                  <p className="text-3xl font-semibold text-primary">Local</p>
+                  <p className="mt-2 text-sm text-white/58">Built for western Kenya workflows</p>
+                </div>
               </div>
-            </Reveal>
-          );
-        })}
+            </div>
+          </Reveal>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {values.map((value, index) => {
+            const Icon = value.icon;
+            return (
+              <Reveal key={value.title} delay={index * 0.08}>
+                <div className="section-frame h-full">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h2 className="font-display mt-5 text-2xl font-semibold">{value.title}</h2>
+                  <p className="mt-3 text-sm leading-7 text-muted-foreground">{value.copy}</p>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

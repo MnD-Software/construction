@@ -14,7 +14,7 @@ export const fallbackContent = {
   heroSubtitle:
     "Reliable cement, sand, ballast, steel and bricks delivered with speed, fair pricing and site-ready support.",
   heroImage:
-    "https://images.unsplash.com/photo-1741778792300-3e420d5fcb26?auto=format&fit=crop&w=1600&q=80",
+    "https://images.pexels.com/photos/31531768/pexels-photo-31531768.jpeg",
   ctaBannerTitle: "Talk to a team that understands site timelines",
   ctaBannerCopy:
     "From urgent top-up orders to bulk contractor supply, Tagotha Investments keeps your project moving.",

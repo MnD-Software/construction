@@ -10,6 +10,13 @@ import { Button } from "@/components/ui/button";
 import { getFeaturedProducts, getSiteContent, getTestimonials } from "@/lib/data";
 import { siteConfig } from "@/lib/site";
 
+const pexelsImages = [
+  "https://images.pexels.com/photos/31531768/pexels-photo-31531768.jpeg",
+  "https://images.pexels.com/photos/4170184/pexels-photo-4170184.jpeg",
+  "https://images.pexels.com/photos/14097580/pexels-photo-14097580.jpeg",
+  "https://images.pexels.com/photos/33540495/pexels-photo-33540495.jpeg"
+];
+
 const services = [
   {
     title: "Fast Delivery",
@@ -38,26 +45,26 @@ const stats = [
 const showcase = [
   {
     id: "nairobi-construction",
-    type: "Kenyan context",
-    title: "Construction growth with local relevance",
-    copy: "Use Kenyan context where possible so the visual story feels closer to the customers Tagotha actually serves.",
-    image: "https://images.unsplash.com/photo-1741778792300-3e420d5fcb26?auto=format&fit=crop&w=1600&q=80",
-    location: "Nairobi, Kenya"
+    type: "Supply view",
+    title: "Construction growth with stronger site presence",
+    copy: "A more grounded visual story works better here than generic placeholder scenery.",
+    image: pexelsImages[1],
+    location: "Active construction context"
   },
   {
     id: "nairobi-skyline",
-    type: "Urban supply view",
-    title: "Materials positioned within a growing urban market",
-    copy: "Where exact local construction imagery is limited, the fallback stays neutral but still connected to the building environment.",
-    image: "https://images.unsplash.com/photo-1611348586755-61bf6f30f3e6?auto=format&fit=crop&w=1600&q=80",
-    location: "Nairobi, Kenya"
+    type: "Material focus",
+    title: "Equipment and supply framed with more clarity",
+    copy: "The image language now stays closer to real construction materials and site conditions.",
+    image: pexelsImages[2],
+    location: "Materials and logistics"
   },
   {
     id: "neutral-roadwork",
-    type: "Neutral fallback",
+    type: "Delivery context",
     title: "Road and infrastructure support",
-    copy: "Neutral civil-work imagery still fits the product story for ballast, sand, cement and steel supply.",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80",
+    copy: "The supporting visuals now reinforce movement, delivery, and operational confidence.",
+    image: pexelsImages[3],
     location: "Regional infrastructure"
   }
 ];
@@ -71,29 +78,78 @@ export default async function HomePage() {
 
   return (
     <>
-      <Hero title={content.heroTitle} subtitle={content.heroSubtitle} image={content.heroImage} />
+      <Hero title={content.heroTitle} subtitle={content.heroSubtitle} image={pexelsImages[0]} />
 
       <section className="section-shell">
-        <Reveal>
-          <StatsStrip items={stats} />
-        </Reveal>
+        <div className="grid gap-6 xl:grid-cols-[1.35fr_0.65fr]">
+          <Reveal>
+            <div className="section-frame">
+              <SectionHeading
+                eyebrow="Featured Materials"
+                title="A tighter layout with more useful information in view"
+                copy="The homepage now uses denser section framing, stronger contrast and clearer grouping so the page feels full without feeling overcrowded."
+              />
+              <div className="mt-8">
+                <StatsStrip items={stats} />
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <div className="dark-panel page-noise h-full p-6 md:p-8">
+              <p className="text-sm uppercase tracking-[0.18em] text-white/58">Operations Board</p>
+              <h3 className="font-display mt-4 text-3xl font-semibold text-white">Built to fit site realities</h3>
+              <div className="mt-6 space-y-4">
+                {[
+                  "Compact sections reduce empty space and keep the page moving.",
+                  "Black, white and orange now drive hierarchy instead of soft beige surfaces.",
+                  "The UI now uses a wider shell with cleaner grouping on desktop."
+                ].map((item) => (
+                  <div key={item} className="rounded-[20px] border border-white/10 bg-white/6 p-4 text-sm leading-7 text-white/72">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       <section className="section-shell pt-0">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Featured Materials"
-            title="Card sliders that feel cleaner, roomier and more deliberate"
-            copy="The product surface now leans into a proper slider rhythm instead of stacking everything into one static composition."
-          />
-        </Reveal>
-        <div className="mt-10">
-          <FeaturedProducts products={products} />
+        <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+          <Reveal>
+            <div className="section-frame">
+              <SectionHeading
+                eyebrow="Featured Materials"
+                title="Products stay prominent without wasting horizontal space"
+                copy="The slider remains central, but it now sits inside a stronger frame so the product area reads as a deliberate commercial surface."
+              />
+              <div className="mt-8">
+                <FeaturedProducts products={products} />
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <div className="section-frame h-full">
+              <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">Supply Priorities</p>
+              <div className="mt-5 grid gap-4">
+                {[
+                  { title: "Fast quoting", copy: "Clear responses for urgent procurement requests." },
+                  { title: "Bulk coordination", copy: "Volume handling for contractors and recurring restocks." },
+                  { title: "Delivery visibility", copy: "A more trustworthy layout that supports conversion." }
+                ].map((item) => (
+                  <div key={item.title} className="rounded-[24px] border border-border bg-background/80 p-5">
+                    <h3 className="font-display text-xl font-semibold">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.copy}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       <section>
-        <div className="section-shell">
+        <div className="section-shell pt-0">
           <Reveal>
             <SectionHeading
               eyebrow="Services"
@@ -136,8 +192,8 @@ export default async function HomePage() {
           <Reveal>
             <SectionHeading
               eyebrow="Why Tagotha"
-              title="A more confident, more modern presentation of trust"
-              copy="The right construction brand UI should look stable, premium and easy to scan. That is the direction applied across the home surface."
+              title="A stronger trust presentation with less visual drift"
+              copy="The interface now leans on deep contrast, compact cards and more deliberate framing so every block earns its space."
             />
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
@@ -158,7 +214,7 @@ export default async function HomePage() {
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white">
                 <ShieldCheck className="h-6 w-6" />
               </div>
-              <h3 className="mt-6 text-3xl font-semibold text-white">Built for reliability</h3>
+              <h3 className="font-display mt-6 text-3xl font-semibold text-white">Built for reliability</h3>
               <p className="mt-4 text-base leading-8 text-white/64">
                 Tagotha Investments serves projects that need a supplier who can move quickly, quote clearly and keep quality steady from one delivery to the next.
               </p>
@@ -187,11 +243,11 @@ export default async function HomePage() {
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.18em] text-white/60">Start your order</p>
-              <h2 className="mt-3 text-3xl font-semibold">{content.ctaBannerTitle}</h2>
+              <h2 className="font-display mt-3 text-3xl font-semibold">{content.ctaBannerTitle}</h2>
               <p className="mt-3 max-w-2xl text-white/70">{content.ctaBannerCopy}</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg" className="rounded-full">
+              <Button asChild size="lg" className="rounded-full bg-primary text-white hover:bg-primary/90">
                 <a href={siteConfig.phoneHref}>Call Now</a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full border-white/14 bg-white/6 text-white hover:bg-white/10">

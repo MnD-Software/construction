@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type React from "react";
-import { Manrope } from "next/font/google";
+import { Manrope, Space_Grotesk } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { SiteShell } from "@/components/site-shell";
 import { siteConfig } from "@/lib/site";
@@ -9,6 +9,11 @@ import "./globals.css";
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-sans"
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display"
 });
 
 export const metadata: Metadata = {
@@ -31,7 +36,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={manrope.variable}>
+      <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
         <Providers>
           <SiteShell>{children}</SiteShell>
         </Providers>

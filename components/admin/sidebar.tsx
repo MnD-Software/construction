@@ -3,8 +3,8 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { signOut } from "next-auth/react";
 import { LayoutDashboard, MessageSquareQuote, Package, Settings, UserRoundSearch } from "lucide-react";
-import { signOut } from "@/auth";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -53,17 +53,16 @@ export function AdminSidebar() {
           );
         })}
       </nav>
-      <form
-        action={async () => {
-          "use server";
-          await signOut({ redirectTo: "/login" });
-        }}
-        className="p-4"
-      >
-        <Button type="submit" variant="outline" className="w-full rounded-full border-white/12 bg-transparent text-white hover:bg-white/8">
+      <div className="p-4">
+        <Button
+          type="button"
+          variant="outline"
+          className="w-full rounded-full border-white/12 bg-transparent text-white hover:bg-white/8"
+          onClick={() => signOut({ callbackUrl: "/login" })}
+        >
           Sign Out
         </Button>
-      </form>
+      </div>
     </aside>
   );
 }
