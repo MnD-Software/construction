@@ -72,7 +72,7 @@ body {
 }
 
 .section-shell {
-  @apply container py-16 md:py-24;
+  @apply container py-12 md:py-24;
 }
 
 .section-title {
@@ -107,6 +107,30 @@ body {
 
 .section-frame {
   @apply relative overflow-hidden rounded-[32px] border border-black/5 bg-white/70 p-6 backdrop-blur-xl dark:border-white/10 dark:bg-white/5 md:p-8;
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image:
+      radial-gradient(circle at top left, rgba(249, 115, 22, 0.14), transparent 28%),
+      linear-gradient(180deg, rgba(255,255,255,0.96), rgba(243,238,230,0.98));
+  }
+
+  .dark body {
+    background-image:
+      radial-gradient(circle at top left, rgba(249, 115, 22, 0.18), transparent 24%),
+      linear-gradient(180deg, rgba(4,4,4,0.99), rgba(10,10,10,0.99));
+  }
+
+  .section-frame {
+    padding: 1.1rem;
+    border-radius: 1.75rem;
+  }
+
+  .industrial-panel,
+  .dark-panel {
+    border-radius: 1.75rem;
+  }
 }
 
 .metric-tile {

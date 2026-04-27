@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { getProductDisplayImage, withHomepageProductImages } from "@/lib/product-visuals";
 import { fallbackContent } from "@/lib/site";
 
 const fallbackProducts = [
@@ -81,9 +82,11 @@ export async function getSiteContent() {
 export async function getProducts() {
   try {
     const products = await prisma.product.findMany({ orderBy: { createdAt: "desc" } });
-    return products.length ? products.map((item) => ({ ...item, price: Number(item.price) })) : fallbackProducts;
+    return products.length
+      ? withHomepageProductImages(products.map((item) => ({ ...item, price: Number(item.price) })))
+      : withHomepageProductImages(fallbackProducts);
   } catch {
-    return fallbackProducts;
+    return withHomepageProductImages(fallbackProducts);
   }
 }
 
@@ -95,9 +98,10 @@ export async function getFeaturedProducts() {
 export async function getProductById(id: string) {
   try {
     const product = await prisma.product.findUnique({ where: { id } });
-    return product ? { ...product, price: Number(product.price) } : null;
+    return product ? { ...product, price: Number(product.price), image: getProductDisplayImage(product) } : null;
   } catch {
-    return fallbackProducts.find((item) => item.id === id) ?? null;
+    const product = fallbackProducts.find((item) => item.id === id);
+    return product ? { ...product, image: getProductDisplayImage(product) } : null;
   }
 }
 

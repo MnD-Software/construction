@@ -35,8 +35,8 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6 md:pt-5">
       <div className="mx-auto max-w-[1720px]">
-        <div className="rounded-[30px] border border-white/10 bg-[#050505]/86 shadow-[0_18px_50px_rgba(0,0,0,0.32)] backdrop-blur-2xl">
-          <div className="container flex h-20 items-center justify-between gap-5">
+        <div className="rounded-[28px] border border-white/10 bg-[#050505]/86 shadow-[0_18px_50px_rgba(0,0,0,0.32)] backdrop-blur-2xl md:rounded-[30px]">
+          <div className="container flex h-16 items-center justify-between gap-4 md:h-20 md:gap-5">
             <BrandMark inverted />
 
             <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2 py-2 text-white lg:flex">
@@ -111,7 +111,7 @@ export function Navbar() {
               </div>
               <div className="mt-3 flex items-center justify-between rounded-[22px] bg-white/[0.03] p-3">
                 <ThemeToggle className="text-white hover:text-white" />
-              <Button asChild className="rounded-full">
+                <Button asChild className="rounded-full">
                   <a href={siteConfig.phoneHref}>Call Now</a>
                 </Button>
               </div>

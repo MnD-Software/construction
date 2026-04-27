@@ -8,14 +8,8 @@ import { StatsStrip } from "@/components/stats-strip";
 import { TestimonialSlider } from "@/components/testimonial-slider";
 import { Button } from "@/components/ui/button";
 import { getFeaturedProducts, getSiteContent, getTestimonials } from "@/lib/data";
+import { homepageImagePool } from "@/lib/product-visuals";
 import { siteConfig } from "@/lib/site";
-
-const pexelsImages = [
-  "https://images.pexels.com/photos/31531768/pexels-photo-31531768.jpeg",
-  "https://images.pexels.com/photos/4170184/pexels-photo-4170184.jpeg",
-  "https://images.pexels.com/photos/14097580/pexels-photo-14097580.jpeg",
-  "https://images.pexels.com/photos/33540495/pexels-photo-33540495.jpeg"
-];
 
 const services = [
   {
@@ -48,7 +42,7 @@ const showcase = [
     type: "Supply view",
     title: "Construction growth with stronger site presence",
     copy: "A more grounded visual story works better here than generic placeholder scenery.",
-    image: pexelsImages[1],
+    image: homepageImagePool[1],
     location: "Active construction context"
   },
   {
@@ -56,7 +50,7 @@ const showcase = [
     type: "Material focus",
     title: "Equipment and supply framed with more clarity",
     copy: "The image language now stays closer to real construction materials and site conditions.",
-    image: pexelsImages[2],
+    image: homepageImagePool[2],
     location: "Materials and logistics"
   },
   {
@@ -64,7 +58,7 @@ const showcase = [
     type: "Delivery context",
     title: "Road and infrastructure support",
     copy: "The supporting visuals now reinforce movement, delivery, and operational confidence.",
-    image: pexelsImages[3],
+    image: homepageImagePool[3],
     location: "Regional infrastructure"
   }
 ];
@@ -78,7 +72,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <Hero title={content.heroTitle} subtitle={content.heroSubtitle} image={pexelsImages[0]} />
+      <Hero title={content.heroTitle} subtitle={content.heroSubtitle} image={homepageImagePool[0]} />
 
       <section className="section-shell">
         <div className="grid gap-6 xl:grid-cols-[1.35fr_0.65fr]">
