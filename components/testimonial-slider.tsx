@@ -25,17 +25,17 @@ export function TestimonialSlider({ testimonials }: { testimonials: Testimonial[
         </div>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((testimonial) => (
           <Card key={testimonial.id} className="industrial-panel rounded-[32px] border-transparent bg-white/84">
-            <CardContent className="p-7">
+            <CardContent className="p-5 md:p-7">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/12 text-primary">
                 <Quote className="h-6 w-6" />
               </div>
-              <p className="font-display mt-8 text-xl leading-9 text-foreground md:text-2xl md:leading-[1.5]">
+              <p className="font-display mt-6 text-lg leading-8 text-foreground md:text-2xl md:leading-[1.5]">
                 "{testimonial.message}"
               </p>
-              <div className="mt-8 border-t border-border pt-5">
+              <div className="mt-6 border-t border-border pt-4">
                 <p className="text-lg font-semibold">{testimonial.name}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{testimonial.role}</p>
               </div>

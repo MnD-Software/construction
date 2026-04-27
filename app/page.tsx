@@ -157,7 +157,7 @@ export default async function HomePage() {
               copy="Tagotha Investments supports contractors, builders, hardware stores and households with practical procurement and delivery support."
             />
           </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -195,7 +195,7 @@ export default async function HomePage() {
               title="A stronger trust presentation with less visual drift"
               copy="The interface now leans on deep contrast, compact cards and more deliberate framing so every block earns its space."
             />
-            <div className="mt-8 grid grid-cols-2 gap-4">
+            <div className="mt-8 grid grid-cols-2 gap-3 md:gap-4">
               {[
                 { value: "Consistent", label: "Material quality" },
                 { value: "Clear", label: "Quote communication" },

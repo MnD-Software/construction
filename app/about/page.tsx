@@ -63,7 +63,7 @@ export default async function AboutPage() {
           </Reveal>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (

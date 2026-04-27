@@ -29,7 +29,7 @@ export default function ServicesPage() {
         copy="We do more than sell products. We help customers plan delivery, manage volume and keep work moving without avoidable delays."
       />
       <div className="section-shell pt-0">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
