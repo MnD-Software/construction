@@ -44,16 +44,16 @@ export function ContactForm() {
       <div className="grid gap-5 md:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="name">Name</Label>
-          <Input id="name" name="name" placeholder="Your name" required />
+          <Input id="name" name="name" placeholder="Your full name" required />
         </div>
         <div className="space-y-2">
           <Label htmlFor="phone">Phone</Label>
-          <Input id="phone" name="phone" placeholder="07..." required />
+          <Input id="phone" name="phone" placeholder="07XXXXXXXX" required />
         </div>
       </div>
       <div className="space-y-2">
         <Label htmlFor="message">Project Details</Label>
-        <Textarea id="message" name="message" placeholder="Tell us what materials you need" required />
+        <Textarea id="message" name="message" placeholder="Tell us the materials, quantities and site location you need quoted" required />
       </div>
       <Button type="submit" disabled={loading}>
         {loading ? <LoaderCircle className="h-4 w-4 animate-spin" /> : null}

@@ -40,16 +40,16 @@ const showcase = [
   {
     id: "nairobi-construction",
     type: "Supply view",
-    title: "Construction growth with stronger site presence",
-    copy: "A more grounded visual story works better here than generic placeholder scenery.",
+    title: "Materials ready for active building projects",
+    copy: "From residential slabs to commercial builds, we supply core materials that help teams keep work moving on schedule.",
     image: homepageImagePool[1],
-    location: "Active construction context"
+    location: "Active construction site"
   },
   {
     id: "nairobi-skyline",
     type: "Material focus",
-    title: "Equipment and supply framed with more clarity",
-    copy: "The image language now stays closer to real construction materials and site conditions.",
+    title: "Reliable stock for daily site requirements",
+    copy: "Cement, steel, sand, ballast and related supplies are coordinated around real demand, not guesswork.",
     image: homepageImagePool[2],
     location: "Materials and logistics"
   },
@@ -57,7 +57,7 @@ const showcase = [
     id: "neutral-roadwork",
     type: "Delivery context",
     title: "Road and infrastructure support",
-    copy: "The supporting visuals now reinforce movement, delivery, and operational confidence.",
+    copy: "We support delivery planning for homes, contractor jobs and infrastructure work that depends on consistent restocking.",
     image: homepageImagePool[3],
     location: "Regional infrastructure"
   }
@@ -80,8 +80,8 @@ export default async function HomePage() {
             <div className="section-frame">
               <SectionHeading
                 eyebrow="Featured Materials"
-                title="A tighter layout with more useful information in view"
-                copy="The homepage now uses denser section framing, stronger contrast and clearer grouping so the page feels full without feeling overcrowded."
+                title="Core materials backed by dependable local supply"
+                copy="Tagotha Investments supports home builders, contractors and hardware stores with construction materials that are priced fairly and delivered with urgency."
               />
               <div className="mt-8">
                 <StatsStrip items={stats} />
@@ -94,9 +94,9 @@ export default async function HomePage() {
               <h3 className="font-display mt-4 text-3xl font-semibold text-white">Built to fit site realities</h3>
               <div className="mt-6 space-y-4">
                 {[
-                  "Compact sections reduce empty space and keep the page moving.",
-                  "Black, white and orange now drive hierarchy instead of soft beige surfaces.",
-                  "The UI now uses a wider shell with cleaner grouping on desktop."
+                  "Fast quote support helps customers budget before work stalls.",
+                  "Bulk coordination reduces procurement gaps on active sites.",
+                  "Delivery planning keeps materials moving to projects on time."
                 ].map((item) => (
                   <div key={item} className="rounded-[20px] border border-white/10 bg-white/6 p-4 text-sm leading-7 text-white/72">
                     {item}
@@ -114,8 +114,8 @@ export default async function HomePage() {
             <div className="section-frame">
               <SectionHeading
                 eyebrow="Featured Materials"
-                title="Products stay prominent without wasting horizontal space"
-                copy="The slider remains central, but it now sits inside a stronger frame so the product area reads as a deliberate commercial surface."
+                title="Products selected for real construction demand"
+                copy="Browse key materials used across foundations, walling, concrete work, finishing and site reinforcement."
               />
               <div className="mt-8">
                 <FeaturedProducts products={products} />
@@ -127,9 +127,9 @@ export default async function HomePage() {
               <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">Supply Priorities</p>
               <div className="mt-5 grid gap-4">
                 {[
-                  { title: "Fast quoting", copy: "Clear responses for urgent procurement requests." },
-                  { title: "Bulk coordination", copy: "Volume handling for contractors and recurring restocks." },
-                  { title: "Delivery visibility", copy: "A more trustworthy layout that supports conversion." }
+                  { title: "Fast quoting", copy: "Clear pricing guidance for urgent procurement requests and budget planning." },
+                  { title: "Bulk coordination", copy: "Volume handling for contractors, institutions and recurring site restocks." },
+                  { title: "Delivery visibility", copy: "Practical dispatch planning for homes, stores and active job sites." }
                 ].map((item) => (
                   <div key={item.title} className="rounded-[24px] border border-border bg-background/80 p-5">
                     <h3 className="font-display text-xl font-semibold">{item.title}</h3>
@@ -186,8 +186,8 @@ export default async function HomePage() {
           <Reveal>
             <SectionHeading
               eyebrow="Why Tagotha"
-              title="A stronger trust presentation with less visual drift"
-              copy="The interface now leans on deep contrast, compact cards and more deliberate framing so every block earns its space."
+              title="A supplier customers can rely on from quote to delivery"
+              copy="Construction projects need steady quality, direct communication and material availability that supports deadlines instead of slowing them down."
             />
             <div className="mt-8 grid grid-cols-2 gap-3 md:gap-4">
               {[

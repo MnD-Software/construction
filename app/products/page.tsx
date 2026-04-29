@@ -9,8 +9,8 @@ export default async function ProductsPage() {
     <>
       <PageHero
         eyebrow="Products"
-        title="Construction materials arranged with a clearer catalogue feel"
-        copy="Browse core material lines, filter quickly, and move from overview to detail with less friction on both desktop and mobile."
+        title="Construction materials for residential, commercial and site work"
+        copy="Browse cement, sand, ballast, steel, bricks and other core supplies used by contractors, hardware stores and home builders."
       />
       <div className="section-shell pt-0">
         <ProductsFilter products={products} />

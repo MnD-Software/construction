@@ -17,12 +17,12 @@ export function ShowcaseCarousel({ slides }: { slides: ShowcaseSlide[] }) {
     <div className="grid gap-5 xl:grid-cols-[0.9fr_1.1fr]">
       <div className="industrial-panel flex flex-col justify-between p-6 md:p-8">
         <div>
-          <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Visual board</p>
+          <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Project Snapshot</p>
           <h3 className="font-display mt-3 max-w-sm text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-            Stronger image composition without forcing a carousel
+            Construction supply built around the work happening on site
           </h3>
           <p className="mt-4 max-w-md text-sm leading-7 text-muted-foreground md:text-base">
-            These panels keep the construction story visual, but they stop making the user click through another slider to understand the brand.
+            These project views highlight the kind of delivery support, material movement and jobsite realities Tagotha Investments is built to serve.
           </p>
         </div>
 

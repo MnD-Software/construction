@@ -24,9 +24,9 @@ export function PageHero({
           </div>
           <div className="grid gap-3 sm:grid-cols-3 md:grid-cols-1">
             {[
-              "Premium presentation instead of flat section headers.",
-              "Better spacing rhythm on mobile and desktop.",
-              "Stronger black, white and orange hierarchy."
+              "Materials sourced for homes, contractors and commercial work.",
+              "Quote support built around budgets, quantities and timelines.",
+              "Delivery planning for Homa Bay and surrounding project areas."
             ].map((item) => (
               <div key={item} className="rounded-[22px] border border-white/10 bg-white/[0.03] p-4 text-sm leading-7 text-white/66">
                 {item}
